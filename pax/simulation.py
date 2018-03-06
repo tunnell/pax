@@ -356,7 +356,9 @@ class Simulator(object):
                 self.config['gains'][channel], self.config['gain_sigmas'][channel]))
 
             # Combine the lone-hits with the normal PMT pulses
-            photon_detection_times = np.concatenate((photon_detection_times, lone_hit_arrival_times_per_channels[channel]))
+            photon_detection_times = np.concatenate(
+                (photon_detection_times, lone_hit_arrival_times_per_channels[channel])
+            )
 
             gains = self.get_gains(channel, len(photon_detection_times))
 
@@ -676,9 +678,7 @@ class Simulator(object):
             )
         # Lone hit rate map
         lone_hit_rate_map = np.asarray(
-                [
-                    float(self.config.get('lone_hit_rate',0.))
-                ]*int(self.config['n_channels'])
+                [float(self.config.get('lone_hit_rate',0.))]*int(self.config['n_channels'])
             )
         if 'lone_hit_rate_per_channel' in self.config:
             lone_hit_rate_map[list(self.config['lone_hit_rate_per_channel'].keys())] = \
