@@ -412,8 +412,7 @@ class Simulator(object):
             gains = np.concatenate((gains, ap_gains))
             photon_detection_times = np.concatenate((photon_detection_times, ap_times))
 
-
-            #  Add padding, sort (eh.. or were we already sorted? and is sorting necessary at all??)
+            # Add padding, sort (eh.. or were we already sorted? and is sorting necessary at all??)
             pmt_pulse_centers = np.sort(photon_detection_times + self.config['event_padding'])
 
             # Build the waveform pulse by pulse (bin by bin was slow, hope this is faster)
@@ -701,11 +700,6 @@ class Simulator(object):
             lone_hit_times,
             np.cumsum(lone_hit_hitp)
         )[:-1]
-
-
-
-
-
 
     def singlet_triplet_delays(self, times, t1, t3, singlet_ratio):
         """
