@@ -4,7 +4,7 @@ pymongo==3.6.1
 matplotlib==2.0.0
 scipy==0.18.1
 tqdm==4.20.0
-prettytable==0.7.2
+prettytable==7
 pandas==0.19.2
 flake8==3.5.0
 python-snappy==0.5
