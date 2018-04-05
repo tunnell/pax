@@ -23,7 +23,7 @@ matrix:
 
 
 notifications:
-  #email:
+  email:
     - ctunnell@nikhef.nl
     - jaalbers@nikhef.nl
     - feigao.ge@gmail.com
