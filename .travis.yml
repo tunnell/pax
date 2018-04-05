@@ -21,26 +21,6 @@ matrix:
         - python: 2.7
           env: PYTHON=2.7 ROOT=6.04
 
-    #     - language: generic
-    #       os: osx
-    #       osx_image: xcode6.4
-    #       env: PYTHON=2.7 ROOT=5.34.32
-    #     - language: generic
-    #       os: osx
-    #       osx_image: xcode6.4
-    #       env: PYTHON=2.7 ROOT=6.04
-    #     - language: generic
-    #       os: osx
-    #       osx_image: xcode6.4
-    #       env: PYTHON=3.4 ROOT=5.34.32
-    #     - language: generic
-    #       os: osx
-    #       osx_image: xcode6.4
-    #       env: PYTHON=3.4 ROOT=6.04
-    # allow_failures:
-    #     - os: osx
-
-
 notifications:
   email:
     - ctunnell@nikhef.nl
@@ -85,6 +65,7 @@ install:
   # Install pax
   - pip install mongodbproxy    # Somehow needs explicit install?
   - python setup.py install
+  - pip freeze
 
   # Run a simple test file, to see if the tests load
   # If there is an import failure, you don't get to know which import is failing otherwise
