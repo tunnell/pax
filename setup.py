@@ -17,6 +17,7 @@ requirements = open('requirements.txt').read().splitlines()
 if six.PY2:
     requirements.append('configparser')
 
+# Avoids "KeyError: 'ROOT'" in TravisCI, see PR #250.
 try:
     import ROOT
 except ImportError:
