@@ -19,12 +19,12 @@ if six.PY2:
 
 # For some reason h5py is often not seen by pip if it was installed by conda...
 # so check for h5py presence manually, and remove it from requirements if already found.
-try:
-    import h5py
-except ImportError:
-    pass
-else:
-    del requirements[requirements.index('h5py')]
+#try:
+#    import h5py
+#except ImportError:
+#    pass
+#else:
+#    del requirements[requirements.index('h5py')]
 
 try:
     import ROOT
