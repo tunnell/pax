@@ -1,21 +1,24 @@
-wheel>=0.23.0
-numpy==1.11.3
+# Upgradable
 pymongo==3.6.1
-matplotlib==2.0.0
-scipy==0.18.1
 tqdm==4.20.0
-prettytable==0.7.2
 pandas==0.22.0
 flake8==3.5.0
 python-snappy==0.5.2
-numba==0.35.0
-scikit-learn==0.18.1
-#h5py==2.6.0
-six==1.10.0
-numexpr==2.6.1
-psutil==5.0.1
 mock==2.0.0
 rabbitpy==1.0.0
 multihist==0.5.4
 msgpack-python==0.5.6
+
+# Unupgradable
+wheel>=0.23.0
+numpy==1.11.3
+matplotlib==2.0.0
+scipy==0.18.1
+prettytable==0.7.2
+numba==0.35.0
+scikit-learn==0.18.1
+#h5py==2.6.0 # See setup.py call
+six==1.10.0
+numexpr==2.6.1
+psutil==5.0.1
 pytz==2017.2
