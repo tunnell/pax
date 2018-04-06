@@ -12,7 +12,7 @@ addons:
       - libboost-all-dev
       - build-essential
       - libc6-dev
-      - libpthread-stubs0
+      - libpthread-stubs0-dev
       - snappy
 
 matrix:
