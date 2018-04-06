@@ -9,6 +9,7 @@ addons:
     packages:
       - libboost-all-dev
       - build-essential
+      - libc6-dev
 
 matrix:
     include:
