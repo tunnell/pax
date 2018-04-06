@@ -10,6 +10,7 @@ addons:
       - libboost-all-dev
       - build-essential
       - libc6-dev
+      - snappy
 
 matrix:
     include:
